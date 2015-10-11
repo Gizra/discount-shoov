@@ -10,3 +10,4 @@ Feature: Login form
     Then  I click "כניסה לחשבונות פרטיים"
     Then  I should see the login panel and go to "שכחתי קוד מזהה"
     Then  I should see "לאחזור קוד מזהה"
+    Then  I see the page

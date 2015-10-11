@@ -43,11 +43,20 @@ class FeatureContext extends MinkContext implements SnippetAcceptingContext {
 
     $this->getSession()->switchToIFrame('hpc-iframe');
     $this->iWaitForCssElement('#RecoverAID');
-    $this->assertPageContainsText($text);
     $element = $this->getSession()->getPage()->find('named', array('link', $text));
+    //Waiting to see the page
+    $this->getSession()->wait(5000);
     $element->click();
+  }
+
+  /**
+   * @Then I see the page
+   */
+  public function iSeeThePage() {
+    //Waiting to see the page
     $this->getSession()->wait(5000);
   }
+
 
   /**
    * @Then I should wait for the text :arg1 to :arg2
