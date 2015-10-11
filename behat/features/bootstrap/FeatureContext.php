@@ -57,7 +57,6 @@ class FeatureContext extends MinkContext implements SnippetAcceptingContext {
     $this->getSession()->wait(5000);
   }
 
-
   /**
    * @Then I should wait for the text :arg1 to :arg2
    */
